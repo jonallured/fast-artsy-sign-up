@@ -1,10 +1,3 @@
-chrome.action.onClicked.addListener((tab) => {
-  chrome.scripting.executeScript({
-    files: ["scripts/fillForm.js"],
-    target: { tabId: tab.id },
-  });
-});
-
 chrome.commands.onCommand.addListener(async (command) => {
   if (command !== "fillForm") return
 
