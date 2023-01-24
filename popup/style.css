@@ -1,0 +1,19 @@
+body {
+  font-size: 14px;
+  line-height: 20px;
+  width: 300px;
+}
+
+h1 {
+  font-size: 22px;
+  line-height: 28px;
+}
+
+form p {
+  display: flex;
+  justify-content: space-between;
+}
+
+form input {
+  width: 200px;
+}
