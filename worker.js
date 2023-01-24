@@ -7,3 +7,11 @@ chrome.commands.onCommand.addListener(async (command) => {
     target: { tabId: tab.id },
   });
 });
+
+chrome.runtime.onInstalled.addListener(async () => {
+  const initialValues = {
+    config: { email: "user@example.com", name: "Test User" }
+  }
+
+  await chrome.storage.local.set(initialValues)
+});
