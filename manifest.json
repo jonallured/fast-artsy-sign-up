@@ -22,6 +22,13 @@
   },
   "permissions": ["activeTab", "scripting"],
   "commands": {
+    "fillForm": {
+      "description": "Fill in the form.",
+      "suggested_key": {
+        "default": "Ctrl+U",
+        "mac": "Command+U"
+      }
+    },
     "_execute_action": {
       "suggested_key": {
         "default": "Ctrl+Shift+U",
