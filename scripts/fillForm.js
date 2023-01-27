@@ -1,8 +1,10 @@
 const fillForm = async () => {
-  const { config } = await chrome.storage.local.get();
+  const { config, filledEmails } = await chrome.storage.local.get();
   const form = document.querySelector("form[data-test='SignUpForm']");
   const [firstBit, lastBit] = config.email.split("@");
   const email = `${firstBit}+${Date.now()}@${lastBit}`;
+  filledEmails.push(email);
+  await chrome.storage.local.set({filledEmails});
 
   const fields = [
     { selector: "input[name='name']", value: config.name },
