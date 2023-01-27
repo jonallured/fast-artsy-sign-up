@@ -10,7 +10,8 @@ chrome.commands.onCommand.addListener(async (command) => {
 
 chrome.runtime.onInstalled.addListener(async () => {
   const initialValues = {
-    config: { email: "user@example.com", name: "Test User" }
+    config: { email: "user@example.com", name: "Test User" },
+    filledEmails: [],
   }
 
   await chrome.storage.local.set(initialValues)
